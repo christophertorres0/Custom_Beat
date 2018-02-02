@@ -1,0 +1,17 @@
+4.times
+with_fx :echo do
+  play 20
+end
+
+live_loop:arp do
+  play (scale :e1, :minor_pentatonic).tick, release: 0.25
+  
+  sleep 2
+end
+
+use_bpm 70
+
+live_loop :breakbeat do
+  sample :loop_breakbeat, beat_stretch: 4, amp: 9
+  sleep 4
+end
